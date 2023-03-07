@@ -1,0 +1,6 @@
+ body{
+    display:flex;
+      flex-direction: column;
+      background-color: #BBBBBB;
+      font-family: system-ui;
+    }
