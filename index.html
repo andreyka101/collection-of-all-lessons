@@ -32,10 +32,14 @@
       background-color:orange;
     }
     .str:nth-child(5) a{
-      background: linear-gradient(70deg, rgb(6, 250, 116), pink 90%);
       color:black;
-      width: 245px;
       border-radius: 11px;
+    }
+    .str:nth-child(5) a:nth-child(1){
+      background: linear-gradient(70deg, rgb(6, 250, 116), pink 90%);
+    }
+    .str:nth-child(5) a:nth-child(2){
+      background: linear-gradient(290deg, rgb(6, 250, 116), pink 90%);
     }
     .str{
       display: flex;
@@ -64,7 +68,7 @@
     transition: filter 0.5s;
   }
   .a:hover {
-    filter: blur(4px);
+    filter: blur(3px) invert(1);
     transition: filter 0.5s;
   }
   </style>
@@ -92,6 +96,7 @@
         <a href="lesson10.html">урок 10</a>
       </div><div class="str">
         <a href="lesson11.html" class="a">урок 11</a>
+        <a href="lesson14.html" class="a">урок 14</a>
       </div>
     </div>
   </div>
