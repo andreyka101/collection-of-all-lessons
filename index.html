@@ -62,14 +62,25 @@
           width: 273px;
     height: 273px;
     }
-    .svg{
+    .svg:nth-child(2){
+      position: fixed;
+      z-index:-50;
+      top: 18%;
+      right: 10%;
+      background: url("motherboard.svg") center/cover;
+      width: 388px;
+      height: 388px;
+      rotate: 120deg;
+    }
+    .svg:nth-child(3){
       position: fixed;
       z-index:-50;
       top: 60%;
-      left: 14%;
-      background: url("motherboard.svg") center/cover;
-      width: 273px;
-      height: 273px;
+      left: 35%;
+      background: url("qr-code.svg") center/cover;
+      width: 208px;
+      height: 208px;
+      rotate: -2deg;
     }
 
     .a{
@@ -85,6 +96,7 @@
 <body>
   <div class="body">
     <div class="img"></div>
+    <div class="svg"></div>
     <div class="svg"></div>
     <span>
       мои работы
