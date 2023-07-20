@@ -180,6 +180,23 @@
     <div class="pacifier2"></div>
   </div>
   <div class="gradient"></div>
+  <script>
+    const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
+
+      observer.unobserve(entry.target)
+    }
+  })
+}
+    const options = {
+  // root: по умолчанию window, но можно задать любой элемент-контейнер
+  rootMargin: '0px',
+  threshold: 0,
+}
+    const observer = new IntersectionObserver(callback, options)
+  </script>
 </body>
 
 </html>
