@@ -127,14 +127,15 @@
       height: 50cqi;
     }
     .pacifier2{
-      height: 350px;
+      height: 600px;
     }
-    .gradient{
-      position: absolute;
-      z-index: -60;
-      height: 250px;
-      width: 100%;
-      background: linear-gradient(#BBBBBB, rgb(224 91 91));
+    .colorJS{
+      background:  #c42d00;
+      transition: background 1.2s;
+    }
+    .colorCSS{
+      background-color: #BBBBBB;
+      transition: background 1.2s;
     }
     </style>
 </head>
@@ -144,7 +145,7 @@
     <div class="img"></div>
     <div class="svg"></div>
     <div class="svg"></div>
-    <span>
+    <span class="target2">
       мои работы
     </span>
     <div class="obsh">
@@ -170,7 +171,7 @@
     <!-- ------------------------------------------------ -->
 
     <div class="pacifier1"></div>
-    <span>JS</span>
+    <span class="target">JS</span>
     <div class="jsPack">
       <div class="facia">
         <a href="https://andreyka101.github.io/lesson-1j/">Lesson 1</a>
@@ -179,14 +180,14 @@
     </div>
     <div class="pacifier2"></div>
   </div>
-  <div class="gradient"></div>
+
+
   <script>
     const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-
-      observer.unobserve(entry.target)
+      document.body.className = "colorJS"
     }
   })
 }
@@ -195,7 +196,30 @@
   rootMargin: '0px',
   threshold: 0,
 }
-    const observer = new IntersectionObserver(callback, options)
+    let observer = new IntersectionObserver(callback, options)
+
+    const target = document.querySelector('.target')
+    observer.observe(target)
+    
+    // ggggggggggggggggggggggggggggggggggggggg
+
+    const callback2 = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log('ggggggg')
+      document.body.className = "colorCSS"
+    }
+  })
+}
+    const options2 = {
+  // root: по умолчанию window, но можно задать любой элемент-контейнер
+  rootMargin: '0px 0px 100px 0px',
+  threshold: 0,
+}
+    observer = new IntersectionObserver(callback2, options2)
+
+    const target2 = document.querySelector('.target2')
+    observer.observe(target2)
   </script>
 </body>
 
