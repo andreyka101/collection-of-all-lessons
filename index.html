@@ -145,6 +145,20 @@
 display: none;
 margin: 35px 50px 0px;
     }
+    .svgError{
+      display: none;
+      position: absolute;
+      /* position: fixed; */
+      z-index:-500;
+      top: 28%;
+      margin:auto;
+      left:0;
+      right:0;
+      z-index:-500;
+      background: url("error_jkcp67079qqg.svg") center/cover;
+      width: 70px;
+      height: 70px;
+    }
     @media screen and (max-width:952px){
       .body{
         display: none;
@@ -152,6 +166,11 @@ margin: 35px 50px 0px;
       .error{
         display: flex;
         justify-content: center;
+      }
+      .svgError{
+        display: flex;
+        justify-content: center;
+        
       }
     }
     .colorJS{
@@ -167,6 +186,7 @@ margin: 35px 50px 0px;
 
 <body>
   <span class="error">в этот сайт можно заходить только на PC</span>
+  <div class="svgError"></div>
   <div class="body">
     <div class="img"></div>
     <div class="svg"></div>
