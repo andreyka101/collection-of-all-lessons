@@ -21,9 +21,6 @@
       justify-content: center;
       align-items: center;
     }
-      a:hover{
-        filter: invert(1);
-      }
     .str:nth-child(3) a:nth-child(2){
       color: black;
       background-color:yellow;
@@ -89,10 +86,6 @@
     .a{
       transition: filter 0.4s;
     }
-    .a:hover {
-      filter: blur(3px) invert(1);
-      transition: filter 0.4s;
-    }
     /* ******************************************************************************** */
     
     .jsPack{
@@ -119,20 +112,16 @@
     .facia a{
       transition: filter 0.4s;
     }
-    .facia a:hover {
-      filter: blur(3.5px);
-      transition: filter 0s;
-    }
     .pacifier1{
       height: 50cqi;
     }
     .pacifier2{
       height: 600px;
     }
-
+    
     .error{
-display: none;
-margin: 35px 50px 0px;
+      display: none;
+      margin: 35px 50px 0px;
     }
     .svgError{
       display: none;
@@ -148,8 +137,48 @@ margin: 35px 50px 0px;
       width: 70px;
       height: 70px;
     }
-    @media screen and (max-width:952px){
-      .body{
+    .colorJS{
+      background:  #b70000;
+      transition: background 1.2s;
+    }
+    .colorCSS{
+      background-color: #BBBBBB;
+      transition: background 1.2s;
+    }
+    @media screen and (min-width:600px){
+      .facia a:hover {
+        filter: blur(3.5px);
+        transition: filter 0s;
+      }
+      .a:hover {
+        filter: blur(3px) invert(1);
+        transition: filter 0.4s;
+      }
+      a:hover{
+        filter: invert(1);
+      }
+    }
+    @media screen and (max-width:600px){
+      .colorJS{
+        background:  #BBBBBB;
+      }
+      .str{
+        flex-direction: column
+      }
+      .facia{
+        flex-direction: column
+      }
+      a{
+        width: 387px;
+        height: 72px;
+      }
+      .pacifier1{
+        height: 100px;
+      }
+      .pacifier2{
+        height: 200px;
+      }
+      /* .body{
         display: none;
       }
       .error{
@@ -160,15 +189,7 @@ margin: 35px 50px 0px;
         display: flex;
         justify-content: center;
         
-      }
-    }
-    .colorJS{
-      background:  #b70000;
-      transition: background 1.2s;
-    }
-    .colorCSS{
-      background-color: #BBBBBB;
-      transition: background 1.2s;
+      } */
     }
     </style>
 </head>
@@ -241,7 +262,7 @@ margin: 35px 50px 0px;
     const callback2 = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log('ggggggg')
+      // console.log('ggggggg')
       document.body.className = "colorCSS"
     }
   })
