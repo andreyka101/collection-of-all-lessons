@@ -8,6 +8,9 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/svg+xml" href="intersect.svg" />
   <style>
+    :root {
+  --Color: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
+}
     body{
       margin: 0;
     }
@@ -160,7 +163,7 @@
     }
     @media screen and (max-width:450px){
       .colorJS{
-        background:  #BBBBBB;
+        background:  var(--Color);
       }
       .str{
         flex-direction: column
@@ -178,18 +181,15 @@
       .pacifier2{
         height: 200px;
       }
-      /* .body{
+      .img{
         display: none;
       }
-      .error{
-        display: flex;
-        justify-content: center;
+      .svg{
+        display: none;
       }
-      .svgError{
-        display: flex;
-        justify-content: center;
-        
-      } */
+      body{
+        background: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
+      }
     }
     </style>
 </head>

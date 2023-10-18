@@ -1,9 +1,11 @@
- .body{
-    display:flex;
-      flex-direction: column;
-      font-family: system-ui;
-    }
-    body{
-      background-color: #BBBBBB;
-    }
-    
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui;
+}
+body {
+  background-color: #bbbbbb;
+}
+a{
+  text-decoration: none;
+}
