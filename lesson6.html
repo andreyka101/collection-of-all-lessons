@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/svg+xml" href="intersect.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>lesson6</title>
   <style>
     .a{
@@ -24,11 +25,8 @@
     .str:nth-child(3) a:nth-child(2){
       background-color: red;
     }
-    .a:hover{
-     filter: invert(1);
-    }
-     .str{
-       display: flex;
+    .str{
+      display: flex;
       padding: 0;
       margin: 0;
      }
@@ -48,8 +46,13 @@
        align-items: center;
        justify-content: center;
     }
-    .my:hover{
-      color:#696969;
+    @media screen and (min-width:600px){
+      .my:hover{
+        color:#696969;
+      }
+      .a:hover{
+       filter: invert(1);
+      }
     }
   </style>
   <body>
