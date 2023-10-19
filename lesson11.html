@@ -23,26 +23,18 @@
     border-radius: 11px;
     transition: filter 0.5s;
   }
-  
-  .a:hover {
-    filter: blur(4px) invert(1);
-    transition: filter 0.5s;
-  }
-  
-  
-    .str:nth-child(1) a {
+  .str:nth-child(1) a {
       background: linear-gradient(196deg, rgb(144, 6, 250), rgb(255, 242, 0) 90%) no-repeat;
       width: 245px;
       height: 160px;
       flex-direction: column;
-    }
+  }
   .str {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
-
   .obsh {
     margin: 0 auto;
   }
@@ -61,10 +53,23 @@
     align-items: center;
     justify-content: center;
   }
-
-  .my:hover {
-    color: #696969;
-  }
+  @media screen and (min-width:600px){
+      .my:hover{
+        color:#696969;
+      }
+      .a:hover {
+      filter: blur(4px) invert(1);
+      transition: filter 0.5s;
+      }
+    }
+    @media screen and (max-width:450px){
+      span:nth-child(1){
+        margin-top: 30px;
+      }
+      .my{
+        margin-top: 15px;
+      }
+    }
 </style>
 
 <body>
