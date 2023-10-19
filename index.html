@@ -148,7 +148,7 @@
       background-color: #BBBBBB;
       transition: background 1.2s;
     }
-    @media screen and (min-width:600px){
+    @media screen and (min-width:800px){
       .facia a:hover {
         filter: blur(3.5px);
         transition: filter 0s;
@@ -159,6 +159,34 @@
       }
       a:hover{
         filter: invert(1);
+      }
+    }
+    @media screen and (max-width:800px){
+      .colorJS{
+        background:  var(--Color);
+      }
+      a{
+        width: 192px;
+        height: 72px;
+      }
+      .pacifier1{
+        height: 100px;
+      }
+      .pacifier2{
+        height: 200px;
+      }
+      .img{
+        display: none;
+      }
+      .svg{
+        display: none;
+      }
+      body{
+        background: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
+      }
+      span:nth-child(4){
+        margin-top: 30px;
+
       }
     }
     @media screen and (max-width:450px){
