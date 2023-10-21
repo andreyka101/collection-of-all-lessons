@@ -253,7 +253,7 @@
         <a href="lesson14.html" class="a">урок 14</a>
       </div>
     </div>
-
+    <div style="background-color:brown;position: fixed;width: 50px;height: 50px;" id="pip"></div>
     <!-- ------------------------------------------------ -->
 
     <div class="pacifier1"></div>
@@ -273,7 +273,32 @@
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-      document.body.className = "colorJS"
+      let start = Date.now(); // запомнить время начала
+
+
+let timer = setInterval(function() {
+  // сколько времени прошло с начала анимации?
+  let timePassed = Date.now() - start;
+  if (timePassed >= 2000) {
+    clearInterval(timer); // закончить анимацию через 2 секунды
+    return;
+  }
+  // отрисовать анимацию на момент timePassed, прошедший с начала анимации
+  draw(timePassed);
+}, 20);
+// в то время как timePassed идёт от 0 до 2000
+// left изменяет значение от 0px до 400px
+function draw(timePassed) {
+  console.log(timePassed)
+  if (100>timePassed && timePassed<1000){
+    document.querySelector('#pip').style.backgroundColor = "#FFEF18";
+  }
+  if (1000>timePassed && timePassed<1800){
+  document.querySelector('#pip').style.backgroundColor = "#18D0FF";
+  }
+}
+
+
     }
   })
 }
