@@ -289,12 +289,12 @@ let timer = setInterval(function() {
 // в то время как timePassed идёт от 0 до 2000
 // left изменяет значение от 0px до 400px
 function draw(timePassed) {
-  console.log(timePassed)
+  // console.log(timePassed)
   if (100>timePassed && timePassed<1000){
-    document.querySelector('#pip').style.backgroundColor = "#FFEF18";
+    console.log(timePassed)
   }
-  if (1000>timePassed && timePassed<1800){
-  document.querySelector('#pip').style.backgroundColor = "#18D0FF";
+  else if (1300>timePassed && timePassed<1800){
+  console.log(timePassed)
   }
 }
 
