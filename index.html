@@ -2,16 +2,17 @@
 <html>
   
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>мои работы</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/svg+xml" href="intersect.svg" />
-  <style>
-    :root {
-  --Color: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
-}
-    body{
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>мои работы</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/svg+xml" href="intersect.svg" />
+    <style>
+      :root {
+        --Color: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
+      }
+      body{
+      /* transition: background 1.2s; */
       margin: 0;
     }
     a{
@@ -140,14 +141,17 @@
       width: 70px;
       height: 70px;
     }
-    .colorJS{
-      background:  #b70000;
+    /* .colorJS{
+      background: #BBBBBB;
       transition: background 1.2s;
+      box-shadow: 0 -150px 70px -120px teal inset,
+              0 -220px 70px -120px yellowgreen inset,
+              0 -280px 70px -120px gold inset;
     }
     .colorCSS{
       background-color: #BBBBBB;
       transition: background 1.2s;
-    }
+    } */
     @media screen and (min-width:800px){
       .facia a:hover {
         filter: blur(3.5px);
@@ -269,11 +273,13 @@
 
 
   <script>
+    const body = document.querySelector('body')
     const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-      document.body.className = "colorJS"
+      // document.body.className = "colorJS"
+      body.style.boxShadow = "0 -1500px 70px -120px teal inset"
     }
   })
 }
