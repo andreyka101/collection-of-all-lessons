@@ -257,7 +257,7 @@
         <a href="lesson14.html" class="a">урок 14</a>
       </div>
     </div>
-
+    <div style="background-color:brown;position: fixed;width: 50px;height: 50px;" id="pip"></div>
     <!-- ------------------------------------------------ -->
 
     <div class="pacifier1"></div>
@@ -278,8 +278,7 @@
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-      // document.body.className = "colorJS"
-      body.style.boxShadow = "0 -1500px 70px -120px teal inset"
+      document.body.className = "colorJS"
     }
   })
 }
