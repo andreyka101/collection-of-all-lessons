@@ -185,20 +185,20 @@
         filter: blur(3.5px);
         transition: filter 0s;
       }
-
+      
       .a:hover {
         filter: blur(3px) invert(1);
         transition: filter 0.4s;
       }
-
+      
       a:hover {
         filter: invert(1);
       }
     }
-
+    
     @media screen and (max-width:800px) {
-      .colorJS {
-        background: var(--Color);
+      #pip{
+        display: none;
       }
 
       a {
@@ -233,9 +233,6 @@
     }
 
     @media screen and (max-width:450px) {
-      .colorJS {
-        background: var(--Color);
-      }
 
       .str {
         flex-direction: column
