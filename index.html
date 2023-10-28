@@ -142,17 +142,16 @@
       width: 70px;
       height: 70px;
     }
-    /* .colorJS{
-      background: #BBBBBB;
-      transition: background 1.2s;
-      box-shadow: 0 -150px 70px -120px teal inset,
-              0 -220px 70px -120px yellowgreen inset,
-              0 -280px 70px -120px gold inset;
+    .colorJS{
+      bottom: 0;
+      transition: 1.2s;
+      animation-timing-function: cubic-bezier(0, 0, 0.3, 1.7);
     }
     .colorCSS{
-      background-color: #BBBBBB;
-      transition: background 1.2s;
-    } */
+      bottom: -700px;
+      transition: 0.8s;
+      animation-timing-function: cubic-bezier(0, 0, 0, 2.44);
+    }
     @media screen and (min-width:800px){
       .facia a:hover {
         filter: blur(3.5px);
@@ -258,7 +257,7 @@
         <a href="lesson14.html" class="a">урок 14</a>
       </div>
     </div>
-    <div style="background-color:brown;position: fixed;width: 50px;height: 50px;" id="pip"></div>
+    <div style="background-color:#5090ad;position: fixed;width: 100%;height: 700px;box-shadow: 0 225px 70px -120px #bbbbbb inset,0 220px 70px -120px #be3333 inset,0 430px 70px -120px #858585 inset;z-index: -2000;" id="pip"></div>
     <!-- ------------------------------------------------ -->
 
     <div class="pacifier1"></div>
@@ -279,7 +278,7 @@
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-      document.body.className = "colorJS"
+      document.querySelector("#pip").className = "colorJS"
     }
   })
 }
@@ -299,7 +298,7 @@
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // console.log('ggggggg')
-      document.body.className = "colorCSS"
+      document.querySelector("#pip").className = "colorCSS"
     }
   })
 }
