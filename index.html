@@ -1,75 +1,90 @@
 <!DOCTYPE html>
 <html>
-  
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>мои работы</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/svg+xml" href="intersect.svg" />
-    <style>
-      :root {
-        --Color: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
-      }
-      body{
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>мои работы</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/svg+xml" href="intersect.svg" />
+  <style>
+    :root {
+      --Color1: #858585;
+      --Color2: #ff0000;
+      --Color3: #5090ad;
+    }
+
+    body {
       /* transition: background 1.2s; */
       /* http://css.yoksel.ru/animation-for-gradients/ */
       margin: 0;
     }
-    a{
+
+    a {
       margin: 7px;
-    width: 115px;
-    height: 66px;
+      width: 115px;
+      height: 66px;
       background-color: green;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    .str:nth-child(3) a:nth-child(2){
+
+    .str:nth-child(3) a:nth-child(2) {
       color: black;
-      background-color:yellow;
+      background-color: yellow;
     }
-    .str:nth-child(4) a:nth-child(1){
-      background-color:orange;
+
+    .str:nth-child(4) a:nth-child(1) {
+      background-color: orange;
     }
-    .str:nth-child(4) a:nth-child(2){
-      background-color:orange;
+
+    .str:nth-child(4) a:nth-child(2) {
+      background-color: orange;
     }
-    .str:nth-child(5) a{
-      color:black;
+
+    .str:nth-child(5) a {
+      color: black;
       border-radius: 11px;
     }
-    .str:nth-child(5) a:nth-child(1){
+
+    .str:nth-child(5) a:nth-child(1) {
       background: linear-gradient(70deg, rgb(6, 250, 116), pink 90%);
     }
-    .str:nth-child(5) a:nth-child(2){
+
+    .str:nth-child(5) a:nth-child(2) {
       background: linear-gradient(290deg, rgb(6, 250, 116), pink 90%);
     }
-    .str{
+
+    .str {
       display: flex;
       padding: 0;
       margin: 0;
     }
-    .obsh{
+
+    .obsh {
       margin: 0 auto;
     }
-    span{
+
+    span {
       margin: 0 auto;
       font-size: 2em;
     }
-    .img{
+
+    .img {
       position: fixed;
-      z-index:-10;
+      z-index: -10;
       top: 17%;
       left: 14%;
       background: url("png-clipart-cat-pixel-art-stardew-valley-cat-animals-black-PhotoRoom.png-PhotoRoom.png") center/cover;
       width: 273px;
       height: 273px;
     }
-    .svg:nth-child(2){
+
+    .svg:nth-child(2) {
       position: fixed;
-      z-index:-50;
+      z-index: -50;
       top: 18%;
       right: 10%;
       background: url("motherboard.svg") center/cover;
@@ -77,9 +92,10 @@
       height: 388px;
       rotate: 120deg;
     }
-    .svg:nth-child(3){
+
+    .svg:nth-child(3) {
       position: fixed;
-      z-index:-50;
+      z-index: -50;
       top: 60%;
       left: 35%;
       background: url("qr-code.svg") center/cover;
@@ -87,147 +103,175 @@
       height: 208px;
       rotate: -2deg;
     }
-    
-    .a{
+
+    .a {
       transition: filter 0.4s;
     }
+
     /* ******************************************************************************** */
-    
-    .jsPack{
+
+    .jsPack {
       margin: 0 auto;
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .facia{
+
+    .facia {
       display: flex;
       padding: 0;
       margin: 0;
     }
-    .facia a{
-      color:black;
+
+    .facia a {
+      color: black;
       border-radius: 11px;
     }
-    .facia a:nth-child(1){
+
+    .facia a:nth-child(1) {
       background: linear-gradient(338deg, rgb(250, 242, 6), rgb(17, 42, 75) 83%);
     }
-    .facia a:nth-child(2){
+
+    .facia a:nth-child(2) {
       background: linear-gradient(22deg, rgb(250, 242, 6), rgb(17, 42, 75) 83%);
     }
-    .facia a{
+
+    .facia a {
       transition: filter 0.4s;
     }
-    .pacifier1{
+
+    .pacifier1 {
       height: 50cqi;
     }
-    .pacifier2{
+
+    .pacifier2 {
       height: 600px;
     }
-    
-    .error{
+
+    .error {
       display: none;
       margin: 35px 50px 0px;
     }
-    .svgError{
+
+    .svgError {
       display: none;
       position: absolute;
       /* position: fixed; */
-      z-index:-500;
+      z-index: -500;
       top: 28%;
-      margin:auto;
-      left:0;
-      right:0;
-      z-index:-500;
+      margin: auto;
+      left: 0;
+      right: 0;
+      z-index: -500;
       background: url("error_jkcp67079qqg.svg") center/cover;
       width: 70px;
       height: 70px;
     }
-    .colorJS{
+
+    .colorJS {
       bottom: 0;
       transition: 1.2s;
       animation-timing-function: cubic-bezier(0, 0, 0.3, 1.7);
     }
-    .colorCSS{
+
+    .colorCSS {
       bottom: -700px;
       transition: 0.8s;
       animation-timing-function: cubic-bezier(0, 0, 0, 2.44);
     }
-    @media screen and (min-width:800px){
+
+    @media screen and (min-width:800px) {
       .facia a:hover {
         filter: blur(3.5px);
         transition: filter 0s;
       }
+
       .a:hover {
         filter: blur(3px) invert(1);
         transition: filter 0.4s;
       }
-      a:hover{
+
+      a:hover {
         filter: invert(1);
       }
     }
-    @media screen and (max-width:800px){
-      .colorJS{
-        background:  var(--Color);
+
+    @media screen and (max-width:800px) {
+      .colorJS {
+        background: var(--Color);
       }
-      a{
+
+      a {
         width: 192px;
         height: 72px;
       }
-      .pacifier1{
+
+      .pacifier1 {
         height: 100px;
       }
-      .pacifier2{
+
+      .pacifier2 {
         height: 200px;
       }
-      .img{
+
+      .img {
         display: none;
       }
-      .svg{
+
+      .svg {
         display: none;
       }
-      body{
+
+      body {
         background: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
       }
-      span:nth-child(4){
+
+      span:nth-child(4) {
         margin-top: 30px;
 
       }
     }
-    @media screen and (max-width:450px){
-      .colorJS{
-        background:  var(--Color);
+
+    @media screen and (max-width:450px) {
+      .colorJS {
+        background: var(--Color);
       }
-      .str{
+
+      .str {
         flex-direction: column
       }
-      .facia{
+
+      .facia {
         flex-direction: column
       }
-      a{
+
+      a {
         width: 250px;
         height: 72px;
       }
-      .pacifier1{
+
+      .pacifier1 {
         height: 100px;
       }
-      .pacifier2{
+
+      .pacifier2 {
         height: 200px;
       }
-      .img{
+
+      .img {
         display: none;
       }
-      .svg{
+
+      .svg {
         display: none;
       }
-      body{
-        background: linear-gradient(109deg, rgb(133, 133, 133), rgb(80, 144, 173) 41%, rgb(109, 109, 109));
-      }
-      span:nth-child(4){
+
+      span:nth-child(4) {
         margin-top: 30px;
 
       }
     }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -239,25 +283,31 @@
       мои работы
     </span>
     <div class="obsh">
-      
+
       <div class="str target2">
         <a href="lesson1.html">урок 1</a>
         <a href="lesson2.html">урок 2</a>
-      </div><div class="str">
+      </div>
+      <div class="str">
         <a href="lesson3.html">урок 3</a>
         <a href="lesson4.html">урок 4</a>
-      </div><div class="str">
+      </div>
+      <div class="str">
         <a href="lesson5.html">урок 5</a>
         <a href="lesson6.html">урок 6</a>
-      </div><div class="str">
+      </div>
+      <div class="str">
         <a href="lesson8.html">урок 8</a>
         <a href="lesson10.html">урок 10</a>
-      </div><div class="str">
+      </div>
+      <div class="str">
         <a href="lesson11.html" class="a">урок 11</a>
         <a href="lesson14.html" class="a">урок 14</a>
       </div>
     </div>
-    <div style="background-color:#5090ad;position: fixed;width: 100%;height: 700px;box-shadow: 0 225px 70px -120px #bbbbbb inset,0 220px 70px -120px #be3333 inset,0 430px 70px -120px #858585 inset;z-index: -2000;" id="pip"></div>
+    <div
+      style="background-color:var(--Color3);position: fixed;width: 100%;height: 700px;box-shadow: 0 225px 70px -120px #bbbbbb inset,0 220px 70px -120px var(--Color2) inset,0 430px 70px -120px var(--Color1) inset;z-index: -2000;"
+      id="pip"></div>
     <!-- ------------------------------------------------ -->
 
     <div class="pacifier1"></div>
@@ -275,42 +325,137 @@
   <script>
     const body = document.querySelector('body')
     const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
-      document.querySelector("#pip").className = "colorJS"
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log('Элемент пересёк границу области и всё ещё соприкасается с ней!')
+          document.querySelector("#pip").className = "colorJS"
+        }
+      })
     }
-  })
-}
     const options = {
-  // root: по умолчанию window, но можно задать любой элемент-контейнер
-  rootMargin: '0px',
-  threshold: 0,
-}
+      // root: по умолчанию window, но можно задать любой элемент-контейнер
+      rootMargin: '0px',
+      threshold: 0,
+    }
     let observer = new IntersectionObserver(callback, options)
 
     const target = document.querySelector('.target')
     observer.observe(target)
-    
+
     // ggggggggggggggggggggggggggggggggggggggg
 
     const callback2 = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // console.log('ggggggg')
-      document.querySelector("#pip").className = "colorCSS"
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // console.log('ggggggg')
+          document.querySelector("#pip").className = "colorCSS"
+        }
+      })
     }
-  })
-}
     const options2 = {
-  // root: по умолчанию window, но можно задать любой элемент-контейнер
-  rootMargin: '0px 0px 100px 0px',
-  threshold: 0,
-}
+      // root: по умолчанию window, но можно задать любой элемент-контейнер
+      rootMargin: '0px 0px 100px 0px',
+      threshold: 0,
+    }
     observer = new IntersectionObserver(callback2, options2)
 
     const target2 = document.querySelector('.target2')
     observer.observe(target2)
+    setInterval(function () {
+      let rand1 = Math.round(Math.random() * (7 - 1) + 1)
+      switch (rand1) {
+        case 1:
+          document.querySelector('html').style.setProperty('--Color1', '#858585')
+          break;
+        case 2:
+          document.querySelector('html').style.setProperty('--Color1', '#6d6d6d')
+          break;
+        case 3:
+          document.querySelector('html').style.setProperty('--Color1', '#825e5e')
+          break;
+        case 4:
+          document.querySelector('html').style.setProperty('--Color1', '#5c2f2f')
+          break;
+        case 5:
+          document.querySelector('html').style.setProperty('--Color1', '#304a40')
+          break;
+        case 6:
+          document.querySelector('html').style.setProperty('--Color1', '#42305c')
+          break;
+        case 7:
+          document.querySelector('html').style.setProperty('--Color1', '#925e7b')
+          break;
+      }
+      let rand2 = Math.round(Math.random() * (10 - 1) + 1)
+      switch (rand2) {
+        case 1:
+          document.querySelector('html').style.setProperty('--Color2', '#ff0000')
+          break;
+        case 2:
+          document.querySelector('html').style.setProperty('--Color2', '#ffa200')
+          break;
+        case 3:
+          document.querySelector('html').style.setProperty('--Color2', '#ebff00')
+          break;
+        case 4:
+          document.querySelector('html').style.setProperty('--Color2', '#2eff00')
+          break;
+        case 5:
+          document.querySelector('html').style.setProperty('--Color2', '#00ffd9')
+          break;
+        case 6:
+          document.querySelector('html').style.setProperty('--Color2', '#000aff')
+          break;
+        case 7:
+          document.querySelector('html').style.setProperty('--Color2', '#d800ff')
+          break;
+        case 8:
+          document.querySelector('html').style.setProperty('--Color2', '#ff0090')
+          break;
+        case 9:
+          document.querySelector('html').style.setProperty('--Color2', '#00ff97')
+          break;
+        case 10:
+          document.querySelector('html').style.setProperty('--Color2', '#7aff00')
+          break;
+      }
+      let rand3 = Math.round(Math.random() * (11 - 1) + 1)
+      switch (rand3) {
+        case 1:
+          document.querySelector('html').style.setProperty('--Color3', '#5090ad')
+          break;
+        case 2:
+          document.querySelector('html').style.setProperty('--Color3', '#8dcdeb')
+          break;
+        case 3:
+          document.querySelector('html').style.setProperty('--Color3', '#64c9f7')
+          break;
+        case 4:
+          document.querySelector('html').style.setProperty('--Color3', '#055275')
+          break;
+        case 5:
+          document.querySelector('html').style.setProperty('--Color3', '#2f5b6f')
+          break;
+        case 6:
+          document.querySelector('html').style.setProperty('--Color3', '#102e3b')
+          break;
+        case 7:
+          document.querySelector('html').style.setProperty('--Color3', '#557381')
+          break;
+        case 8:
+          document.querySelector('html').style.setProperty('--Color3', '#03202d')
+          break;
+        case 9:
+          document.querySelector('html').style.setProperty('--Color3', '#136387')
+          break;
+        case 10:
+          document.querySelector('html').style.setProperty('--Color3', '#146b92')
+          break;
+        case 11:
+          document.querySelector('html').style.setProperty('--Color3', '#5090ad')
+          break;
+      }
+    }, 3500);
   </script>
 </body>
 
