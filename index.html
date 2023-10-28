@@ -335,12 +335,12 @@
       threshold: 0,
     }
     let observer = new IntersectionObserver(callback, options)
-
+    
     const target = document.querySelector('.target')
     observer.observe(target)
-
+    
     // ggggggggggggggggggggggggggggggggggggggg
-
+    
     const callback2 = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
